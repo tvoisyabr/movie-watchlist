@@ -15,6 +15,7 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  margin-bottom: 4em;
 }
 
 .header {
@@ -72,13 +73,15 @@ a:hover {
   margin-left: 2.625em;
 }
 
-.search-input {
+.search-input,
+.search-input:active {
   width: max-content;
   margin-left: 0.5em;
   outline: none;
   background: transparent;
   border: none;
   font-weight: 500;
+  color: #868e96;
 }
 
 .search-input::placeholder,
@@ -114,7 +117,7 @@ a:hover {
 
 /* MAIN */
 
-/* DEFAULT */
+/* DEFAULT/INVALID */
 .default {
   margin: 13.25em auto;
   display: flex;
@@ -133,6 +136,91 @@ a:hover {
 }
 
 .default-icon,
-.default h3 {
+.default h3,
+.invalid-title {
   color: #dfdddd;
+}
+
+.invalid-title {
+  max-width: 321px;
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+/* MOVIE RESULT */
+
+#movie-result {
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-card {
+  display: flex;
+  gap: 1.3125em;
+  margin: 0 2.75em;
+  padding: 1.25em 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.movie-poster {
+  width: 99px;
+  height: 148px;
+}
+
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.625em;
+}
+
+.title-rating {
+  display: flex;
+  gap: 0.5em;
+}
+
+.title-rating h2 {
+  color: #000000;
+  font-size: 1.125rem;
+}
+
+.rating,
+.movie-meta {
+  color: #111827;
+  font-size: 0.75rem;
+}
+
+.movie-meta {
+  max-width: 342px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.watchlist-btn {
+  color: #ffffff;
+  border: none;
+  background-color: #111827;
+  cursor: pointer;
+  padding: 0.375em 0.5em;
+  border-radius: 5px;
+}
+
+.add-btn {
+  width: 20px;
+  height: 20px;
+  color: #000000;
+}
+
+.movie-description {
+  color: #6b7280;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* UTILITIES */
+
+.hidden {
+  display: none;
 }
