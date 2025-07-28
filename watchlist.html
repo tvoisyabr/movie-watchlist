@@ -14,33 +14,16 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-    <title>Movies</title>
+    <title>Watchlist</title>
   </head>
   <body>
     <header>
       <div class="header">
-        <h1>Find your film</h1>
-        <a id="watchlist-link" href="watchlist.html">My Watchlist</a>
+        <h1>My Watchlist</h1>
+        <a id="watchlist-link" href="index.html">Search for movies</a>
       </div>
-      <form class="search-form">
-        <div class="search">
-          <span class="search-icon material-symbols-outlined"> search </span>
-          <input
-            id="search-input"
-            class="search-input"
-            type="search"
-            placeholder="Search for a movie"
-          />
-        </div>
-        <button id="search-btn" class="search-btn" type="submit">Search</button>
-      </form>
     </header>
-    <main id="movie-result">
-      <div class="default">
-        <span class="default-icon material-symbols-outlined"> movie </span>
-        <h3>Start exploring</h3>
-      </div>
-    </main>
-    <script src="script.js" type="module"></script>
+    <main id="movie-watchlist"></main>
+    <script src="watchlist.js" type="module"></script>
   </body>
 </html>

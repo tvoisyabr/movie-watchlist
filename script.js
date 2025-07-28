@@ -3,10 +3,11 @@ const searchInput = document.getElementById('search-input');
 const searchBtn = document.getElementById('search-btn');
 const movieResult = document.getElementById('movie-result');
 const mainDefault = document.querySelector('.default');
-const watchlistLink = document.getElementById('whatchlist-link');
+const watchlistLink = document.getElementById('watchlist-link');
+const movieWatchlist = document.getElementById('movie-watchlist');
 
 let movies = [];
-let myWatchlist = [];
+let myWatchlist = JSON.parse(localStorage.getItem('myWatchlist')) || [];
 
 searchForm.addEventListener('submit', async (e) => {
   e.preventDefault();
@@ -19,15 +20,11 @@ document.addEventListener('click', (e) => {
   }
 });
 
-watchlistLink.addEventListener('click', () => {
-  localStorage.setItem('myWatchlist', JSON.stringify(myWatchlist));
-});
-
 function handleAddToWatchlistClick(imdbID) {
   if (!myWatchlist.includes(imdbID)) {
     myWatchlist.push(imdbID);
+    localStorage.setItem('myWatchlist', JSON.stringify(myWatchlist));
   }
-  console.log(myWatchlist);
 }
 
 async function getMovies(movieToSearch) {
@@ -76,7 +73,7 @@ async function render() {
           <div class="movie-meta">
             <span>${movie.Runtime}</span>
             <span>${movie.Genre}</span>
-            <button data-add=${movie.imdbID} class="watchlist-btn">Watchilst</button>
+            <button data-add=${movie.imdbID} class="watchlist-btn">Watchlist</button>
           </div>
           <p class="movie-description">${movie.Plot}</p>
            </div>

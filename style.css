@@ -137,7 +137,8 @@ a:hover {
 
 .default-icon,
 .default h3,
-.invalid-title {
+.invalid-title,
+.default-watchlist p {
   color: #dfdddd;
 }
 
@@ -148,9 +149,23 @@ a:hover {
   font-weight: bold;
 }
 
+.default-watchlist p {
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 0.875em;
+}
+
+.default-watchlist a {
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #363636;
+}
+
 /* MOVIE RESULT */
 
-#movie-result {
+#movie-result,
+#movie-watchlist {
   display: flex;
   flex-direction: column;
 }
@@ -177,6 +192,7 @@ a:hover {
 
 .title-rating {
   display: flex;
+  justify-content: space-between;
   gap: 0.5em;
 }
 
