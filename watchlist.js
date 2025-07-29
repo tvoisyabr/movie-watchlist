@@ -57,7 +57,7 @@ async function renderWatchlist() {
       </div>
       `;
       })
-      .join();
+      .join('');
     movieWatchlist.innerHTML = movieCards;
   } else {
     movieWatchlist.innerHTML = `

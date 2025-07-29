@@ -82,5 +82,6 @@ async function render() {
     })
     .join('');
 
+  document.querySelector('.default').classList.add('hidden');
   movieResult.innerHTML = movieCards;
 }

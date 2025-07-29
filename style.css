@@ -71,6 +71,8 @@ a:hover {
   background-color: #ffffff;
   width: 100%;
   margin-left: 2.625em;
+
+  max-width: 462px;
 }
 
 .search-input,
@@ -176,6 +178,7 @@ a:hover {
   margin: 0 2.75em;
   padding: 1.25em 0;
   border-bottom: 1px solid #e5e7eb;
+  max-width: 462px;
 }
 
 .movie-poster {
@@ -186,7 +189,6 @@ a:hover {
 .movie-info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 0.625em;
 }
 
@@ -194,6 +196,7 @@ a:hover {
   display: flex;
   justify-content: space-between;
   gap: 0.5em;
+  max-width: 342px;
 }
 
 .title-rating h2 {
@@ -239,4 +242,45 @@ a:hover {
 
 .hidden {
   display: none;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 481px) {
+  .movie-card {
+    align-self: center;
+  }
+}
+
+@media (min-width: 769px) {
+  #movie-result,
+  #movie-watchlist {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .header {
+    justify-content: center;
+    gap: 2em;
+  }
+
+  .movie-card {
+    height: 100%;
+  }
+}
+
+@media (min-width: 1025px) {
+  #movie-result,
+  #movie-watchlist {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .header {
+    height: 312px;
+  }
+
+  .search-form {
+    top: 292px;
+    /* justify-content: start; */
+  }
 }
